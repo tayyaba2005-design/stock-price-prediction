@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Price Prediction</title>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Stock Price Prediction</h1>
+
+    <!-- COMPANY -->
+    <label>Select Company</label>
+    <select id="company" onchange="loadPrices()">
+        <option>Loading...</option>
+    </select>
+
+    <!-- PRICES -->
+    <label>Last 30 Days Prices</label>
+    <textarea id="prices" rows="3" readonly></textarea>
+
+    <!-- GRAPH -->
+    <canvas id="stockChart"></canvas>
+
+    <!-- BUTTON -->
+    <button onclick="predictPrice()">Predict</button>
+
+    <!-- RESULT -->
+    <h2 id="result">₹ --</h2>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
